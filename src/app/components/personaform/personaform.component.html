@@ -1,0 +1,23 @@
+<div class="offset-md-4-2">
+    <div class="card">
+        <div class="card-body">
+            <form>
+                <div class="form-group">
+                    <input type="text" name="nombre" [(ngModel)]="persona.nombre" placeholder="Nombre" class="form-control" autofocus>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="apellidop" [(ngModel)]="persona.apellidop" placeholder="Apellido paterno" class="form-control" autofocus>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="apellidom" [(ngModel)]="persona.apellidom" placeholder="Apellido materno" class="form-control" autofocus>
+                </div>
+                <div class="form-group">
+                    <input type="number" name="edad" [(ngModel)]="persona.edad" placeholder="Edad" class="form-control" autofocus>
+                </div>
+                <button class="btn btn-success btn-block" (click)="edit ? updatePerson() : saveNewPerson()">
+                  Guardar
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

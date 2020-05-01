@@ -1,0 +1,28 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido paterno</th>
+            <th scope="col">Apellido materno</th>
+            <th scope="col">Edad</th>
+            <th scope="col">Acción</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let persona of listpersonas">
+            <th scope="row">{{persona.id}}</th>
+            <td>{{persona.nombre}}</td>
+            <td>{{persona.apellidop}}</td>
+            <td>{{persona.apellidom}}</td>
+            <td>{{persona.edad}}</td>
+            <td>
+                <button class="btn btn-danger" (click)="deletePerson(persona.id)">
+                        X
+                    </button> *
+                <a [routerLink]="['/person/edit/', persona.id]" class="btn btn-success">
+                Edit
+                </a>
+        </tr>
+    </tbody>
+</table>
